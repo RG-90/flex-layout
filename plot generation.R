@@ -58,6 +58,9 @@ plot6<-ggplot(dt, aes(y =Air, x = Initiatives, size = Air, col = planet, alpha =
 plot6
 ggplotly(plot6)
 
+plot7<-ggplot(dt, aes(x=Initiatives, y = Air)) + geom_line(color = "red") + theme_clean() +  labs(title = "Tree of Life",caption = "Data source: RG09") + ylab("Air of life")
+plot7
+
 #generating simple map
 
 icon<-makeIcon("640px-KPMG_logo.svg.png", iconWidth = 95, iconHeight = 38, shadowUrl = "https://home.kpmg/be/en/home.html" )
@@ -82,4 +85,4 @@ pretty.dt<-formattable(dt,list(Pollution =color_tile("white", "green"), Temperat
 pretty.dt.x<-as.datatable(pretty.dt)
 pretty.dt
 
-dt%>%kable()
+
